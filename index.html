@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Siddharth Pattnaik — Apps</title>
+<meta name="description" content="Apps by Siddharth Pattnaik: NiosPDF and Traffic India: Escape the Jam.">
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #ffffff; --text: #16181d; --muted: #5b6270;
+    --border: #e2e5ea; --accent: #2457d6; --accent-text: #ffffff; --chip: #eef1f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111318; --card: #1a1d24; --text: #e8eaef; --muted: #9aa1ae;
+      --border: #2a2f39; --accent: #6b93ff; --accent-text: #0d1020; --chip: #242833;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 16px 64px; }
+  header h1 { font-size: 1.9rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  header p { margin: 0 0 36px; color: var(--muted); }
+  .app {
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    padding: 22px 22px 20px; margin-bottom: 18px;
+  }
+  .app h2 { margin: 0 0 2px; font-size: 1.3rem; }
+  .tag {
+    display: inline-block; font-size: 0.78rem; color: var(--muted); background: var(--chip);
+    border-radius: 999px; padding: 2px 10px; margin: 6px 0 10px;
+  }
+  .app p { margin: 0 0 16px; color: var(--muted); }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn {
+    display: inline-block; text-decoration: none; font-weight: 600; font-size: 0.95rem;
+    padding: 9px 16px; border-radius: 9px; background: var(--accent); color: var(--accent-text);
+  }
+  .btn.secondary { background: transparent; color: var(--accent); border: 1px solid var(--border); }
+  .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  footer { margin-top: 40px; font-size: 0.85rem; color: var(--muted); }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Siddharth Pattnaik</h1>
+    <p>Independent app developer.</p>
+  </header>
+
+  <section class="app" id="niospdf">
+    <h2>NiosPDF</h2>
+    <span class="tag">Windows · Android</span>
+    <p>An offline-first, privacy-focused PDF workstation: read, edit, OCR, convert office documents, fill forms,
+      sign and organise your library, with an optional on-device AI assistant.</p>
+    <div class="links">
+      <a class="btn" href="https://apps.microsoft.com/detail/9N03D905JSV6">Get it from Microsoft Store</a>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.niospdf.app">Get it on Google Play</a>
+    </div>
+  </section>
+
+  <section class="app" id="trafficindia">
+    <h2>Traffic India: Escape the Jam</h2>
+    <span class="tag">Android · Coming soon</span>
+    <p>A tap-to-exit traffic puzzle across 13 Indian cities: clear the jam one vehicle at a time, past cows,
+      potholes, baraats and chai breaks.</p>
+    <div class="links">
+      <a class="btn secondary" href="https://play.google.com/store/apps/details?id=in.spattnaik.trafficindia">Google Play (coming soon)</a>
+    </div>
+  </section>
+
+  <footer>
+    <a href="app-ads.txt">app-ads.txt</a>
+  </footer>
+</main>
+</body>
+</html>
