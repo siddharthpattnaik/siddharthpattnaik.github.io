@@ -10,157 +10,162 @@
 
 <h1>Privacy Policy for NiosPDF (Android)</h1>
 <p class="meta">Application ID: <code>com.niospdf.app</code><br>
-Last updated: 4 October 2026<br>
+Last updated: 29 October 2026<br>
 Other platforms: <a href="privacy-ios.html">iOS</a> &middot; <a href="privacy-desktop.html">Windows and Mac</a></p>
 
-<p>NiosPDF ("the app") is a PDF viewer and editor. This policy explains what the app does
-and does not do with your information. In short: <strong>NiosPDF does not collect, transmit,
-or sell your personal data, and your documents never leave your device</strong> — unless you
-choose to connect the optional AI assistant to an AI server of your own (see section 5).</p>
+<p>NiosPDF ("the app"), made by Siddharth Pattnaik, is a PDF viewer and editor. This policy
+covers the Flutter Android app, which replaces the earlier MAUI Android app under the same
+application ID. <strong>Document processing and AI inference run on your device.</strong>
+There are no user accounts, ads, analytics SDKs or automatic crash-report uploads. The app does
+not offer a custom AI server connection or send documents or prompts to a hosted AI service.</p>
 
 <h2>1. Information we collect</h2>
-<p>We collect <strong>no personal information whatsoever</strong>. The app has no user accounts,
-no sign-in, no advertising, no analytics SDK, and no crash-reporting SDK. We operate no servers
-and receive no data from your device.</p>
-<p><strong>Reporting a problem.</strong> If the app runs into an error, Settings offers an
-<em>Email log</em> action. It opens your mail app with a message to the developer
-(support@spattnaik.in) already written, with the app and system version in the text and the crash
-log (section 3) attached. Nothing is sent by NiosPDF: you can read, change or delete the message
-and the attachment, and it goes only if you press Send. You can also share the log yourself or
-clear it in Settings. We use a report only to fix the problem it describes, and keep it only for
-as long as that takes.</p>
+<p>We do not automatically collect personal information or receive your documents, usage history,
+AI questions or answers. We do not operate an app backend. Network downloads and services you
+choose to use are explained below.</p>
+<p><strong>Support reports.</strong> Settings offers Email and Share log actions for the local
+crash log. Email opens a draft to support@spattnaik.in with system information and the newest part
+of the log in the message body; Share log lets you send a copy of the log through an app you
+choose. You can review the draft and it is sent only if you press Send. An AI answer report can
+also include your question and the generated answer (section 5). If you contact us, we receive
+your email address and whatever you choose to send. We use this information to respond and
+investigate the problem, and retain it only as long as needed for those purposes. Do not include
+confidential information you do not want to share.</p>
 
 <h2>2. Your documents and files</h2>
-<p>Every operation — viewing, editing, merging, splitting, annotating, filling and signing forms,
-compressing, converting, and optical character recognition (OCR) — is performed entirely
-<strong>on your device</strong>. Your PDFs and other files are never uploaded to us or to any
-third party.</p>
+<p>Viewing, editing, merging, splitting, annotating, filling and signing forms, compressing,
+converting, OCR, translation and AI inference are performed <strong>on your device</strong>.
+NiosPDF does not upload your files or their contents to us or to an AI provider.</p>
+<p>You control external transfers. Sharing, exporting, printing, opening a web link or sending
+a support report hands the selected content to the app, print service or destination you choose.
+A file selected through a cloud-backed Android document provider may be downloaded or synced by
+that provider, including when you save edits back to it. Those services handle data under their
+own policies; on-device processing does not prevent a destination you choose from using the network.</p>
 
 <h2>3. Data stored on your device</h2>
-<p>The app stores the following locally, in its own private application storage, so that it can
-work between sessions. This data stays on your device and is removed when you uninstall the app
-or clear its storage:</p>
+<p>The app keeps data in its private application storage and cache, including:</p>
 <ul>
-  <li>A library index of documents you have opened, including file names, paths, page counts and thumbnails.</li>
-  <li>A text search index built from documents you choose to index, so search works offline.</li>
-  <li>Signatures and form-filling profile details (for example a name, address or email) that
-      <em>you</em> choose to save for reuse when filling and signing documents.</li>
-  <li>Recovery copies of in-progress edits, so unsaved work survives an interruption.</li>
-  <li>If you use the optional AI assistant: the AI models you chose to download; the passages,
-      summaries, suggested questions and conversations it keeps so they open instantly next time;
-      and, if you configured one, your own AI server's address, model name and API key, encrypted
-      with a key held by the Android Keystore.</li>
-  <li>App settings and preferences, such as theme and default OCR language.</li>
-  <li>A crash log: a short technical record of the most recent errors the app could not handle
-      (when each happened and where in the app's code it failed, and Android's own record of why the previous session ended). An error message can
-      occasionally name a file. The log never leaves your device unless you send or share it (section 1),
-      and you can clear it in Settings.</li>
+  <li>Documents imported, received, scanned or created in the app, and working copies of linked files.</li>
+  <li>A local library database with document names, file paths or provider references, tags,
+      reading positions, page counts and text search indexes; cached thumbnails.</li>
+  <li>Signatures and form details (such as a name, address or email) you choose to save for reuse.</li>
+  <li>Unsaved edits and recovery information used to resume interrupted work.</li>
+  <li>Downloaded AI models and local AI data, such as document passages, search vectors,
+      cached summaries and title or tag suggestions.</li>
+  <li>App settings and preferences, including theme, OCR and translation choices.</li>
+  <li>A local crash log of recent errors and stack traces. The logger removes file paths and
+      document-provider references from recorded error messages and does not intentionally record
+      document content. Review any log before sharing it.</li>
+</ul>
+<p>Private app data is removed when you clear the app's storage or uninstall it. Files saved to
+shared storage or an external document provider remain there. Android backup is disabled for the
+app; keep your own copies of important documents. When upgrading from the earlier MAUI Android
+app, supported library records, saved form details, signatures and preferences are migrated
+locally; compatible downloaded AI models are reused. No migration data is sent to us.</p>
+
+<h2>4. Permissions and system access</h2>
+<ul>
+  <li><strong>Internet</strong> — used to download AI models you select. Google components also
+      need network access for scanner components and OCR or translation models (sections 5 and 6).
+      AI inference does not require a network connection after the required models are downloaded.</li>
+  <li><strong>Scanning and pictures</strong> — scanning uses Google Play services' document scanner,
+      which manages camera access in its own interface. NiosPDF does not request a direct camera
+      permission. Pictures are selected through Android's photo or file picker, without broad
+      access to your photo library.</li>
+  <li><strong>Foreground service and notifications</strong> — show progress for long operations,
+      such as batch OCR or model downloads, while the app is in the background. Android may ask
+      permission to show notifications; refusing it hides the progress notification.</li>
+  <li><strong>Files you select</strong> — the system picker or share sheet grants access to chosen
+      documents. The app may retain a provider grant to reopen a document and save edits back to it.
+      It does not request unrestricted access to all files on your device.</li>
 </ul>
 
-<h2>4. Permissions the app requests, and why</h2>
+<h2>5. AI assistant (optional, local only)</h2>
+<p>The AI assistant is <strong>off by default</strong>. You choose whether to enable it and which
+chat or smart document search models to download. Summaries, document questions and answers,
+explanations and suggestions are generated locally. NiosPDF has no custom AI server setting,
+API-key connection or cloud inference fallback. Your documents, prompts and answers are not sent
+to us or to model publishers for inference or training.</p>
 <ul>
-  <li><strong>Internet / network state</strong> — used by the app in two cases you start: downloading
-      an offline AI model you choose in Settings (section 5), and, only if you configure one,
-      sending questions to your own AI server. It is also used by Google Play services to download the
-      on-device machine-learning models described in section 6, and to hand a web link to your
-      browser when you tap one. The app itself does not upload any of your content.</li>
-  <li><strong>Camera</strong> (optional) — used only when you start the document scanner, to capture
-      pages. Captured images are saved to the app's own storage; they are not transmitted anywhere.</li>
-  <li><strong>Foreground service and notifications</strong> — used to show progress when a long batch
-      operation (such as OCR over many pages) continues while the app is in the background.</li>
-  <li><strong>Access to files you select</strong> — the app can only read the documents you explicitly
-      open or import through the system file picker or share sheet.</li>
+  <li><strong>Model downloads.</strong> Models are downloaded over HTTPS from
+      <a href="https://huggingface.co">Hugging Face</a> and its download infrastructure. The
+      catalogue includes models hosted by Qwen, LM Studio Community, HuggingFaceTB (SmolLM2)
+      and CompendiumLabs (bge-small-en-v1.5). Requests retrieve model files; they contain no
+      document content, prompts, account credentials or app tracking identifier. The download
+      host receives your IP address and ordinary request information under the
+      <a href="https://huggingface.co/privacy">Hugging Face privacy policy</a>.
+      Downloads use storage and may incur your network provider's data charges.</li>
+  <li><strong>Local processing and storage.</strong> Downloaded models run on your device using
+      llama.cpp. Document passages, search vectors and cached insights used by the assistant
+      are kept locally. Model availability and speed depend on your device's memory and storage.</li>
+  <li><strong>Reporting an answer.</strong> "Report this answer" opens an email draft to
+      support@spattnaik.in containing the question and answer or summary, model name, and app and
+      system information. It does not attach the PDF, but the question or generated answer may
+      contain information from it. Review or remove anything sensitive before sending. Nothing
+      is sent automatically. If no mail app opens, the report text is copied to the clipboard
+      so you can paste it into a message yourself.</li>
+  <li><strong>Control and deletion.</strong> You can turn off the assistant and remove downloaded
+      models in Settings &rarr; AI assistant. Turning it off does not itself erase stored models
+      or AI data. Removing a document from the library removes its associated AI index and
+      cached insights. Clearing app storage or uninstalling removes the app's private local data.</li>
 </ul>
 
-<h2>5. AI assistant (optional)</h2>
-<p>NiosPDF includes an optional AI assistant that can summarise a document, answer questions about
-it with page references, suggest next steps (such as filling a form or finding personal data to
-redact), and explain, simplify or translate selected text. It is <strong>off by default</strong>, and
-nothing about it runs, downloads or is sent anywhere until you turn it on in Settings.</p>
-<ul>
-  <li><strong>Offline models (the default).</strong> The assistant runs an AI model entirely on your
-      device. No model is included in the app: you choose one in Settings and it is downloaded once
-      from <a href="https://huggingface.co">Hugging Face</a>, from the repository that hosts it:
-      Qwen, LM Studio Community, HuggingFaceTB (SmolLM2, the Micro model) or CompendiumLabs
-      (bge-small-en-v1.5, the Lite smart document search model).
-      The download request asks for the model file and nothing else — no document content,
-      identifier or personal data is sent. As with any web request, Hugging Face receives your IP
-      address and handles it under the
-      <a href="https://huggingface.co/privacy">Hugging Face privacy policy</a>. After that, every
-      summary, answer and suggestion is produced on your device; your documents, questions and
-      answers are not sent to us, to Hugging Face, or to anyone else.</li>
-  <li><strong>Your own AI server (optional).</strong> Instead of an offline model you may enter the
-      address and API key of an AI service of your choosing (for example OpenAI or a server you run
-      yourself). If you do, the text of the documents you ask about and your questions are sent
-      over an encrypted (HTTPS) connection to <em>that</em> service, which handles them under its
-      own terms and privacy policy. NiosPDF asks you to confirm this before the first use, shows the
-      server's address wherever an answer is written, and never sends anything there on its own.
-      We do not operate, see or receive anything from that service.</li>
-  <li><strong>Memory.</strong> The model is loaded only while you are using the assistant, and is
-      removed from memory when it has been idle for a short while, when you leave the app, and when
-      the system is short of memory.</li>
-  <li><strong>Reporting an answer.</strong> The assistant's header has a flag, "Report this answer".
-      It opens your mail app with a message to the developer (support@spattnaik.in) already written: the question you asked and the
-      answer you are reporting (or the summary), which model wrote it, and the app and system version.
-      No document text and no server address is included. Nothing is sent by NiosPDF: the message is
-      in your mail app, you can change or delete any of it, and it goes only if you press Send. If you
-      have no mail app, the same text is copied so you can paste it into one. We read reports to
-      improve the assistant and remove content that should not be produced, and keep them only for
-      as long as that takes.</li>
-  <li><strong>Deleting it.</strong> You can remove downloaded models, remove your server details, and
-      clear everything the assistant kept, in Settings → AI assistant. Removing a document from the
-      library also removes what the assistant kept about it. Downloaded models and your server
-      details are excluded from Android's cloud backups.</li>
-</ul>
-
-<h2>6. Third-party components</h2>
-<p>NiosPDF uses <strong>Google ML Kit</strong> (Document Scanner and Text Recognition), delivered
-through Google Play services, for page detection and OCR. Recognition runs on your device; page
-images and recognised text are not sent to Google by NiosPDF. Google Play services may download
-the required models over the network and may collect its own operational and diagnostic
-information under Google's own policies. ML Kit's own usage logging is switched off inside
-NiosPDF: the usage records it would otherwise upload from the app are discarded on your device. See
-<a href="https://developers.google.com/ml-kit/terms">Google ML Kit terms</a> and the
-<a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
-
-<p>NiosPDF uses Google Play's <strong>in-app updates</strong> library to tell you when a newer version
-is available. On launch it asks Google Play whether an update exists; NiosPDF sends no document content,
-identifier or personal data and receives only the update status. If you choose <em>Update now</em>, Google Play
-downloads and installs it under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
-Nothing is installed unless you choose it.</p>
-
-<p>The app also bundles PDF, document-conversion and UI libraries (including Syncfusion, PdfPig
-and PDFsharp) and the llama.cpp inference engine, all of which run locally and perform no network
-communication. The AI models are published by the Qwen team (Alibaba Cloud) and Hugging Face
-(SmolLM2) under the Apache 2.0 licence, and by BAAI (bge-small-en-v1.5) under the MIT licence, and
-are downloaded from Hugging Face as described in section 5.</p>
+<h2>6. Third-party components and services</h2>
+<p><strong>Google ML Kit and Google Play services.</strong> Document scanning, text recognition
+and translation run on-device. Images, recognised text and translation input and output are not
+sent to Google for processing. Required scanner components, OCR script models and translation
+language models may be downloaded. NiosPDF disables the Google data-transport upload backend used
+for ML Kit usage logs in the app process. Google Play services may still handle its own
+operational and diagnostic information under Google's policies. See the
+<a href="https://developers.google.com/ml-kit/terms">Google ML Kit terms and privacy information</a>
+and <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+<p><strong>App updates.</strong> NiosPDF asks the Play Store whether an update is available through
+Google Play's in-app update library. No document content is included. If you accept an update,
+Google Play downloads and installs it under its own policies.</p>
+<p><strong>Read aloud.</strong> Selected document text is handed to your Android text-to-speech
+engine. Whether that engine uses offline voices or a network service depends on the engine and
+voice you select and its settings and privacy policy.</p>
+<p><strong>Local libraries.</strong> The Flutter app uses pdfrx/PDFium, pdf_document, SQLite,
+local document-conversion libraries, Syncfusion's Flutter signature pad and llama.cpp. These
+components process documents locally. Their licences and notices are available in the app.
+The Android app no longer uses the earlier MAUI PDF stack.</p>
+<p><strong>External links and optional support payments.</strong> Links open in your browser.
+Optional contributions are handled on Razorpay or PayPal's websites, under their own terms and
+privacy policies. NiosPDF does not handle your payment credentials. See the
+<a href="terms.html">Terms of Use</a>.</p>
 
 <h2>7. Children's privacy</h2>
-<p>NiosPDF is a general-purpose productivity tool and is not directed at children under 13. Because
-we collect no personal information from anyone, we do not knowingly collect it from children.</p>
+<p>NiosPDF is a general-purpose productivity tool and is not directed at children under 13.
+We do not knowingly collect personal information from children. If you believe a child has sent
+us personal information in a support message, contact us so we can delete it.</p>
 
 <h2>8. Data sharing, sale and retention</h2>
-<p>We do not share, sell, rent, or disclose personal data, because we do not collect any. There is
-no server-side retention of your data. Data held locally on your device is retained until you
-delete it in the app, clear the app's storage, or uninstall the app.</p>
+<p>We do not sell or rent personal data, or share it for advertising. We hold no server-side copy
+of your documents or AI activity. Voluntary support messages are retained as described in
+section 1; your email provider and any service you choose have their own retention policies.
+Local app data remains until removed through the app, cleared with Android's storage controls
+or removed by uninstalling. Temporary caches may be cleared earlier.</p>
 
-<h2>9. Your rights</h2>
-<p>You remain in full control of your data. You can delete individual documents, signatures and
-saved profile details from within the app, or remove everything at once by clearing the app's
-storage or uninstalling it. Since we hold no copy of your data, there is nothing for us to
-delete on your behalf.</p>
+<h2>9. Your control and rights</h2>
+<p>You can remove library entries, saved signatures and form details using the app's controls.
+Removing a library entry does not delete the source file unless you also choose the file-deletion
+option. Clearing app storage or uninstalling removes private app data but does not delete copies
+you exported, shared or saved elsewhere. Contact us to request access to or deletion of personal
+information you sent us voluntarily; we cannot access or erase data held only on your device or
+by a separate service.</p>
 
 <h2>10. Security</h2>
-<p>App data is stored in Android's private per-application storage, which other apps cannot read.
-Password-protected PDFs remain protected; passwords you enter are used only to open the document
-in memory and are not saved unless you choose to.</p>
+<p>The app uses Android's private application storage. Saved form profile details are encrypted
+with a key protected through Android Keystore. This does not mean that every document, signature,
+index or cache is separately encrypted by NiosPDF. Protect your device and any exported files,
+and use PDF password protection where appropriate. No storage or security measure is infallible.</p>
 
 <h2>11. Changes to this policy</h2>
 <p>If this policy changes, the updated version will be published at this same URL with a revised
 "Last updated" date. Material changes will also be noted in the app's release notes.</p>
 
 <h2>12. Contact</h2>
-<p>Questions about this policy or the app can be sent to
+<p>Questions about this policy, support reports or your privacy rights can be sent to
 <a href="mailto:sidd.pattnaik@gmail.com">sidd.pattnaik@gmail.com</a>.</p>
 
 <hr>
