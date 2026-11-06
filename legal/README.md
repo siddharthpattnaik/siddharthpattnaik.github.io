@@ -22,7 +22,6 @@ trafficindia/          Traffic India: Escape the Jam (game with ads and purchase
   privacy-ios.html     written ahead of the iOS release: re-check against the build before submitting
   terms.html           terms of use, shared by both platforms
 picjodo/               PicJodo: Photo Collage Maker (Android only; on-device editor with ads and a one-time purchase)
-carovio/               redirects to picjodo/ (the app's earlier name)
   privacy-android.html
   terms.html           terms of use
 ```
