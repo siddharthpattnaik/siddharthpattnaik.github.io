@@ -10,103 +10,168 @@
 
 <h1>Privacy Policy for NiosPDF (iOS and iPadOS)</h1>
 <p class="meta">Bundle identifier: <code>com.niospdf.app</code><br>
-Last updated: 8 September 2026<br>
+Last updated: 24 November 2026<br>
 Other platforms: <a href="privacy-android.html">Android</a> &middot; <a href="privacy-desktop.html">Windows and Mac</a></p>
 
-<p>NiosPDF ("the app") is a PDF viewer and editor for iPhone and iPad. This policy explains what the
-app does and does not do with your information. In short: <strong>NiosPDF does not collect,
-transmit, or sell your personal data, and your documents never leave your device.</strong></p>
+<p>NiosPDF ("the app"), made by Siddharth Pattnaik, is a PDF viewer and editor for iPhone and
+iPad. <strong>Document processing and AI inference run on your device.</strong> There are no user
+accounts, ads, analytics SDKs, tracking or automatic crash-report uploads. The app does not send
+documents or prompts to a hosted AI service.</p>
 
 <h2>1. Information we collect</h2>
-<p>We collect <strong>no personal information whatsoever</strong>. The app has no user accounts,
-no sign-in, no advertising, no analytics SDK, and no crash-reporting or telemetry SDK. We operate
-no servers and receive no data from your device. NiosPDF does not track you across apps or
-websites, and contains no third-party tracking code.</p>
+<p>We do not automatically collect personal information or receive your documents, usage history,
+AI questions or answers. We do not operate an app backend. Network downloads and services you
+choose to use are explained below.</p>
+<p><strong>Support reports.</strong> Settings offers Email and Share log actions for the local
+crash log, and a diagnostics screen in Settings can share an activity log (section 3). Email opens
+a draft to support@spattnaik.in with system information and the newest part of the log in the
+message body; Share sends a copy through an app you choose. You can review the draft, and it is
+sent only if you press Send. An AI answer report can also include your question and the generated
+answer (section 5). If you contact us, we receive your email address and whatever you choose to
+send. We use this information to respond and investigate the problem, and keep it only as long as
+needed for those purposes. Do not include confidential information you do not want to share.</p>
 
 <h2>2. Your documents and files</h2>
-<p>Every operation — viewing, editing, merging, splitting, annotating, filling and signing forms,
-compressing, converting, and optical character recognition (OCR) — is performed entirely
-<strong>on your device</strong>. Your documents are never uploaded to us or to any third party.</p>
+<p>Viewing, editing, merging, splitting, annotating, filling and signing forms, compressing,
+converting, text recognition, translation and AI inference are performed <strong>on your
+device</strong>. NiosPDF does not upload your files or their contents to us or to an AI
+provider.</p>
+<p>You control external transfers. Sharing, exporting, printing, opening a web link or sending a
+support report hands the selected content to the app, print service or destination you choose. A
+file you open in place from iCloud Drive or another Files location may be downloaded or synced by
+that provider, including when you save edits back to it. Those services handle data under their
+own policies.</p>
 
 <h2>3. Data stored on your device</h2>
-<p>The app stores the following locally, in its own sandboxed container, so that it can work
-between sessions. This data stays on your device and is removed when you delete the app:</p>
+<p>The app keeps data inside its own iOS container, including:</p>
 <ul>
-  <li>A library index of documents you have opened, including file names, page counts and thumbnails.</li>
-  <li>A text search index built from documents you choose to index, so search works offline.</li>
-  <li>Signatures and form-filling profile details (for example a name, address or email) that
-      <em>you</em> choose to save for reuse when filling and signing documents.</li>
-  <li>Recovery copies of in-progress edits, so unsaved work survives an interruption.</li>
+  <li>Documents imported, received, scanned or created in the app. These are kept in the app's
+      Documents folder, which you can also see in the Files app under On My iPhone or On My iPad
+      &rarr; NiosPDF.</li>
+  <li>Working copies of documents you open in place from Files, and cached thumbnails.</li>
+  <li>A local library database with document names, file locations, tags, reading positions,
+      page counts and text search indexes.</li>
+  <li>Signatures and form details (such as a name, address or email) you choose to save for reuse.</li>
+  <li>Unsaved edits and recovery information used to resume interrupted work.</li>
+  <li>Downloaded AI models and local AI data, such as document passages, search vectors, cached
+      summaries and title or tag suggestions.</li>
   <li>App settings and preferences, stored in the system user-defaults database.</li>
+  <li>A crash log of recent errors and stack traces, and an activity log of what the app recorded
+      while it ran (for example launches, timings and handled errors), kept for troubleshooting.
+      Both remove file paths and file references from what they record and do not intentionally
+      record document content. They stay on your device unless you share or email them. Review
+      any log before sending it.</li>
 </ul>
-<p>If you have iCloud Backup enabled, iOS may include this container in your encrypted device
-backup. That backup is handled by Apple under
-<a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>; we have no access to it.</p>
+<p>Deleting the app removes its container. If iCloud Backup or a computer backup is on, iOS may
+include the app's documents and data in your device backup, handled by Apple under
+<a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>; we have no access to it.
+Downloaded AI models and caches are excluded from backup. Saved form details are encrypted with a
+key that stays on this device, so a backup restored to a different device cannot read them.</p>
 
-<h2>4. Network use</h2>
-<p>NiosPDF is offline by design. It makes no network request while you view or edit a document, and
-it performs no background communication or usage reporting. The only time the network is involved
-is when you tap a web link, which is handed to your browser to open under its own policy.</p>
-
-<h2>5. Text recognition</h2>
-<p>Text recognition, where available, runs entirely on your device using Apple's built-in
-<strong>Vision</strong> framework. Page images and recognised text are never sent off the device.</p>
-
-<h2>6. Permissions the app may request</h2>
-<p>iOS asks for your consent before granting any of the following, and the app works without them:</p>
+<h2>4. Permissions and system access</h2>
+<p>iOS asks for your consent before granting the camera, and the rest of the app works without it:</p>
 <ul>
-  <li><strong>Files you select</strong> — the app can only read documents you explicitly open,
-      import through the Files picker, or send to it from the share sheet. It has no access to the
-      rest of your storage.</li>
-  <li><strong>Camera</strong> (only if you use in-app document scanning) — used solely to capture
-      pages, which are saved to the app's own container. Captured images are not transmitted
-      anywhere.</li>
-  <li><strong>Photo library</strong> (only if you import an image) — used solely to read the images
-      you pick.</li>
+  <li><strong>Camera</strong> &mdash; used only when you scan paper with the document camera
+      (Apple's VisionKit). Scanned pages are saved in the app and not transmitted.</li>
+  <li><strong>Pictures</strong> &mdash; chosen through Apple's photo picker, which gives the app only
+      the pictures you pick, without access to the rest of your photo library.</li>
+  <li><strong>Files you select</strong> &mdash; the Files picker or share sheet grants access to the
+      documents you choose. The app may keep that access to reopen a document and save edits back
+      to it. It has no access to the rest of your files.</li>
+  <li><strong>Network</strong> &mdash; used only for downloads you start: AI models (section 5) and,
+      through iOS, translation languages (section 6). Document work needs no connection.</li>
 </ul>
 
-<h2>7. Third-party components</h2>
-<p>The app bundles PDF, document-conversion and UI libraries — including Syncfusion, PdfPig and
-PDFsharp — all of which run locally and perform no network communication of their own. No
-third-party SDK in the app collects analytics, advertising identifiers, or tracking data.</p>
+<h2>5. AI assistant (optional, local only)</h2>
+<p>The AI assistant is <strong>off by default</strong>. You choose whether to enable it and which
+chat or smart document search models to download. Summaries, document questions and answers,
+explanations and suggestions are generated locally. NiosPDF has no custom AI server setting,
+API-key connection or cloud inference fallback. Your documents, prompts and answers are not sent
+to us or to model publishers for inference or training.</p>
+<ul>
+  <li><strong>Model downloads.</strong> Models are downloaded over HTTPS from
+      <a href="https://huggingface.co">Hugging Face</a> and its download infrastructure, using
+      iOS's background download service so a download can finish while the app is closed. The
+      catalogue includes models hosted by Qwen, LM Studio Community, HuggingFaceTB (SmolLM2) and
+      CompendiumLabs (bge-small-en-v1.5). Requests retrieve model files; they contain no document
+      content, prompts, account credentials or app tracking identifier. The download host
+      receives your IP address and ordinary request information under the
+      <a href="https://huggingface.co/privacy">Hugging Face privacy policy</a>. Downloads use
+      storage and may incur your network provider's data charges.</li>
+  <li><strong>Local processing and storage.</strong> Downloaded models run on your device using
+      llama.cpp. Document passages, search vectors and cached insights used by the assistant are
+      kept locally. Model availability and speed depend on your device's memory and storage.</li>
+  <li><strong>Reporting an answer.</strong> "Report this answer" opens an email draft to
+      support@spattnaik.in containing the question and answer or summary, model name, and app and
+      system information. It does not attach the PDF, but the question or generated answer may
+      contain information from it. Review or remove anything sensitive before sending. Nothing is
+      sent automatically. If no mail app opens, the report text is copied to the clipboard so you
+      can paste it into a message yourself.</li>
+  <li><strong>Control and deletion.</strong> You can turn off the assistant and remove downloaded
+      models in Settings &rarr; AI assistant. Turning it off does not itself erase stored models
+      or AI data. Removing a document from the library removes its associated AI index and cached
+      insights. Deleting the app removes its local data.</li>
+</ul>
 
-<h2>8. Printing and sharing</h2>
-<p>Printing hands the document to the operating system's print system and the printer you select.
-If you export or share a file to another application, that file and its handling then fall under
-that application's own privacy policy. NiosPDF sends nothing elsewhere.</p>
+<h2>6. Apple frameworks and other components</h2>
+<p><strong>Text recognition, scanning and translation.</strong> Text recognition uses Apple's
+Vision framework, scanning uses Apple's VisionKit document camera, and translation (iOS 18 and
+later) uses Apple's Translation framework. All three run on your device; page images, recognised
+text and translation input and output are not sent to us. Translation languages are downloaded and
+managed by iOS when you ask for them, under
+<a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>. NiosPDF does not use
+Google ML Kit or any Google service on iOS.</p>
+<p><strong>Read aloud.</strong> Selected document text is handed to iOS's speech synthesis, which
+uses the voices installed on your device.</p>
+<p><strong>Local libraries.</strong> The app uses pdfrx/PDFium, pdf_document, qpdf, SQLite, local
+document-conversion libraries, Syncfusion's Flutter signature pad and llama.cpp. These components
+process documents locally and make no network connections of their own. Their licences and
+notices are in the app under Settings &rarr; About &rarr; Open-source licences.</p>
+<p><strong>External links and optional support payments.</strong> Links open in your browser.
+Optional contributions are handled on Razorpay or PayPal's websites, under their own terms and
+privacy policies. NiosPDF does not handle your payment credentials. See the
+<a href="terms.html">Terms of Use</a>.</p>
 
-<h2>9. App Store distribution</h2>
-<p>The App Store operates its own account, purchase and diagnostic systems, governed by
-<a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>. If you consent to share
-diagnostics with developers in iOS Settings, Apple may provide us with anonymised crash reports;
-these come from Apple, not from code in the app, and contain no document content.</p>
+<h2>7. App Store and TestFlight</h2>
+<p>The App Store and TestFlight operate their own account, purchase and diagnostic systems,
+governed by <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>. If you
+consent to share diagnostics with developers in iOS Settings, or send feedback through TestFlight,
+Apple may provide us with crash reports and the feedback you send; these come from Apple, not from
+code in the app.</p>
 
-<h2>10. Children's privacy</h2>
-<p>NiosPDF is a general-purpose productivity tool and is not directed at children under 13. Because
-we collect no personal information from anyone, we do not knowingly collect it from children.</p>
+<h2>8. Children's privacy</h2>
+<p>NiosPDF is a general-purpose productivity tool and is not directed at children under 13. We do
+not knowingly collect personal information from children. If you believe a child has sent us
+personal information in a support message, contact us so we can delete it.</p>
 
-<h2>11. Data sharing, sale and retention</h2>
-<p>We do not share, sell, rent, or disclose personal data, because we do not collect any. There is
-no server-side retention of your data. Data held locally is retained until you delete it in the app
-or delete the app.</p>
+<h2>9. Data sharing, sale and retention</h2>
+<p>We do not sell or rent personal data, or share it for advertising. We hold no server-side copy
+of your documents or AI activity. Voluntary support messages are retained as described in
+section 1; your email provider and any service you choose have their own retention policies. Local
+app data remains until you remove it in the app or delete the app. Temporary caches may be cleared
+earlier, by the app or by iOS.</p>
 
-<h2>12. Your rights</h2>
-<p>You remain in full control of your data. You can delete individual documents, signatures and
-saved profile details from within the app, or remove everything at once by deleting the app. Since
-we hold no copy of your data, there is nothing for us to delete on your behalf.</p>
+<h2>10. Your control and rights</h2>
+<p>You can remove library entries, saved signatures and form details using the app's controls.
+Removing a library entry does not delete the source file unless you also choose to delete the
+file. Deleting the app removes its private data but does not delete copies you exported, shared or
+saved elsewhere. Contact us to request access to or deletion of personal information you sent us
+voluntarily; we cannot access or erase data held only on your device or by a separate service.</p>
 
-<h2>13. Security</h2>
-<p>App data is stored inside the app's iOS sandbox, which other apps cannot read, and is protected
-by your device passcode and Apple's file-level encryption. Password-protected PDFs remain
-protected; passwords you enter are used only to open the document in memory and are not saved
-unless you choose to.</p>
+<h2>11. Security</h2>
+<p>App data is stored in the app's iOS container, which other apps cannot read, and is protected by
+your device passcode and iOS data protection. Saved form details are additionally encrypted with a
+key kept in the iOS Keychain. Passwords for protected PDFs are used to open the document and are
+not saved. This does not mean that every document, signature, index or cache is separately
+encrypted by NiosPDF. Protect your device and any exported files, and use PDF password protection
+where appropriate. No storage or security measure is infallible.</p>
 
-<h2>14. Changes to this policy</h2>
+<h2>12. Changes to this policy</h2>
 <p>If this policy changes, the updated version will be published at this same URL with a revised
 "Last updated" date. Material changes will also be noted in the app's release notes.</p>
 
-<h2>15. Contact</h2>
-<p>Questions about this policy or the app can be sent to
+<h2>13. Contact</h2>
+<p>Questions about this policy, support reports or your privacy rights can be sent to
 <a href="mailto:sidd.pattnaik@gmail.com">sidd.pattnaik@gmail.com</a>.</p>
 
 <hr>
