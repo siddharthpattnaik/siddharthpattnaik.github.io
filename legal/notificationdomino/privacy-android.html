@@ -60,6 +60,9 @@ new device.</p>
       and measured (see section 4).</li>
   <li><strong>Billing</strong> — added by Google Play Billing so that the optional purchase can be
       made.</li>
+  <li><strong>Keep awake and foreground service</strong> — added by the Google Mobile Ads SDK, which
+      uses Android's background-work scheduler to finish ad-related tasks reliably. The game itself
+      does not run in the background, keep your screen on, or show a persistent notification.</li>
 </ul>
 <p>The game requests no runtime permissions: no notifications, location, camera, microphone,
 contacts, storage or phone access.</p>
@@ -72,8 +75,8 @@ only when you choose to watch one for a reward (for example a hint or an extra m
 occasional full-screen ads on the results screen between levels. To deliver and measure ads and
 to prevent fraud, Google collects and processes information from your device, including the
 <strong>advertising ID</strong>, IP address (from which an approximate location such as country or
-city can be derived), device model, operating system, language, and how you interact with ads.
-Depending on your choices and your region, Google and its advertising partners may use this to
+city can be derived), device model, operating system, language, how you interact with ads, and
+diagnostic information about errors in the ads SDK. Depending on your choices and your region, Google and its advertising partners may use this to
 show personalised ads.</p>
 <ul>
   <li>Where the law requires it (for example in the European Economic Area, the United Kingdom and
