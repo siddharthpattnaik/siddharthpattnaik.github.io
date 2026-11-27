@@ -24,6 +24,9 @@ trafficindia/          Traffic India: Escape the Jam (game with ads and purchase
 picjodo/               PicJodo: Photo Collage Maker (Android only; on-device editor with ads and a one-time purchase)
   privacy-android.html
   terms.html           terms of use
+notificationdomino/    Notification Domino (Android only; offline puzzle game with ads and one Remove Ads purchase; no cloud save)
+  privacy-android.html written ahead of release: re-check against the final build before submitting
+  terms.html           terms of use
 ```
 
 ## Adding a new app
